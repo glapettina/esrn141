@@ -142,6 +142,17 @@ class imprimirReporte{
 
 		}
 
+		if ($_GET["area"] == "eve") {
+
+			$area = "ESPACIO E.V.E.";
+
+			$saberes = $respuestaInforme["saberes_eve"];
+			$aprecia = $respuestaInforme["aprecia_eve"];
+			$asistencia = $respuestaInforme["asistencia_eve"];
+			$observa = $respuestaInforme["observa_eve"];
+
+		}
+
 		if ($_GET["area"] == "desarrollo") {
 
 			$area = "C.O. - DESARROLLO SUSTENTABLE DEL TURISMO";
