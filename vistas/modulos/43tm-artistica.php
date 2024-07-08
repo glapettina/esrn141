@@ -14,12 +14,12 @@
     
     <section class="content-header">
       <h1>
-        1º Primera TM - Area Lenguajes Artísticos
+        4º Tercera TM - Area Lenguajes Artísticos
         
       </h1>
       <ol class="breadcrumb">
         <li><a href="inicio"><i class="fa fa-dashboard"></i> Inicio</a></li>
-        <li class="active">1º Primera TM - Area Lenguajes Artísticos</li>
+        <li class="active">4º Tercera TM - Area Lenguajes Artísticos</li>
       </ol>
     </section>
 
@@ -35,12 +35,12 @@
             
               echo '<div class="box-header with-border">
                         
-                <button type="submit" class="btn btn-danger" idCurso=1 tabla="primero" data-toggle="modal" data-target="#modalCopiaSaberes">
+                <button type="submit" class="btn btn-danger" idCurso=14 tabla="cuarto" data-toggle="modal" data-target="#modalCopiaSaberes">
                   
                   Copia Saberes
                 </button>
 
-                <button class="btn btn-primary btnInformeArea" area="artistica" periodo="'.$_SESSION['periodo'].'" idCurso=1 tabla="primero" informe="informe-area">
+                <button class="btn btn-primary btnInformeArea" area="artistica" periodo="'.$_SESSION['periodo'].'" idCurso=14 tabla="cuarto" informe="informe-area">
                   
                   Informes Curso
                 </button>
@@ -76,8 +76,8 @@
               <?php
 
                   $item = "id_curso";
-                  $valor = 1;
-                  $tabla = "primero";
+                  $valor = 14;
+                  $tabla = "cuarto";
                   $periodo = $_SESSION["periodo"];
                   $verifica = true;
 
@@ -107,15 +107,13 @@
 
 
                           if ($_SESSION["perfil"] != "Preceptor") {
-                            
+
                             
                             echo'<div class="btn-group">
 
-                              <button class="btn btn-warning btnEditarInformeArtistica" tabla="primero" periodo="'.$_SESSION['periodo'].'" idAlumno="'.$value["id"].'" nombreAlumno="'.$value["nombre"].'" data-toggle="modal" data-target="#modalEditarInforme"><i class="fa fa-pencil"></i></button>
-
-  
+                              <button class="btn btn-warning btnEditarInformeArtistica" nombreAlumno="'.$value["nombre"].'" tabla="cuarto" periodo="'.$_SESSION['periodo'].'" idAlumno="'.$value["id"].'" data-toggle="modal" data-target="#modalEditarInforme"><i class="fa fa-pencil"></i></button>
+                              
                             </div>';
-                           
                             
                              
                             }
@@ -123,12 +121,11 @@
 
                             echo '<div class="btn-group">
                                 
-                              <button class="btn btn-primary btnImprimirInformeIndividual" informe="informe-individual" periodo="'.$_SESSION['periodo'].'" tabla="primero" area="artistica" idAlumno="'.$value["id"].'" data-toggle="modal" data-target="#modalImprimirInformeIndividual"><i class="fa fa-print"></i></button>
+                              <button class="btn btn-primary btnImprimirInformeIndividual" informe="informe-individual" periodo="'.$_SESSION['periodo'].'" tabla="cuarto" area="artistica" idAlumno="'.$value["id"].'" data-toggle="modal" data-target="#modalImprimirInformeIndividual"><i class="fa fa-print"></i></button>
                               
                             </div>
 
                           </td>
-
 
                         </tr> ';
                   }
@@ -176,7 +173,7 @@
             <button type="button" class="close" data-dismiss="modal">&times;</button>
 
            
-              <h4 class="modal-title" id="alumnoEdicion"></h4>
+            <h4 class="modal-title" id="alumnoEdicion"></h4>
 
           </div>
 
@@ -227,8 +224,19 @@
                 
                 <div class="input-group">
                   
-                  <span class="input-group-addon"><i class="fa fa-th"></i></span>
-                  <input class="form-control input-lg" type="number" name="asistenciaArtistica" id="asistenciaArtistica" placeholder="Ingresar asistencia (%)" required>
+                  
+                  <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                  <select class="form-control input-lg" id="asistenciaArtistica" name="asistenciaArtistica">
+
+                  <option value="">Asistencia</option>
+                  <option value="0 %">0 %</option>
+                  <option value="25 %">25 %</option>
+                  <option value="50 %">50 %</option>
+                  <option value="75 %">75 %</option>
+                  <option value="100 %">100 %</option>
+                                        
+
+                  </select>
 
                 </div>
 
@@ -256,7 +264,6 @@
 
             <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Salir</button>
 
-
             <button type="submit" class="btn btn-primary">Guardar Cambios</button>
 
               <input type="hidden" name="idAlumno" id="idAlumno"> 
@@ -265,8 +272,8 @@
 
          <?php
 
-              $tabla = "primero";
-              $curso = "11tm-artistica";
+              $tabla = "cuarto";
+              $curso = "43tm-artistica";
 
               $editarInforme = new ControladorInformes();
               $editarInforme -> ctrEditarInformeArtistica($tabla, $curso);
@@ -349,15 +356,13 @@
 
          <?php
 
-              $tabla = "primero";
-              $curso = "11tm-artistica";
-              $ncurso = 1;
+              $tabla = "cuarto";
+              $curso = "43tm-artistica";
+              $ncurso = 14;
               $periodo = $_SESSION["periodo"];
-              
 
               $copiaSaberes = new ControladorInformes();
               $copiaSaberes -> ctrCopiarSaberesArtistica($tabla, $curso, $ncurso, $periodo);
-
 
           ?>
 

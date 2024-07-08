@@ -14,12 +14,12 @@
     
     <section class="content-header">
       <h1>
-        1º Primera TM - Area Lenguajes Artísticos
+        3º Tercera TM - Area Lenguajes Artísticos
         
       </h1>
       <ol class="breadcrumb">
         <li><a href="inicio"><i class="fa fa-dashboard"></i> Inicio</a></li>
-        <li class="active">1º Primera TM - Area Lenguajes Artísticos</li>
+        <li class="active">3º Tercera TM - Area Lenguajes Artísticos</li>
       </ol>
     </section>
 
@@ -35,12 +35,12 @@
             
               echo '<div class="box-header with-border">
                         
-                <button type="submit" class="btn btn-danger" idCurso=1 tabla="primero" data-toggle="modal" data-target="#modalCopiaSaberes">
+                <button type="submit" class="btn btn-danger" idCurso=13 tabla="tercero" data-toggle="modal" data-target="#modalCopiaSaberes">
                   
                   Copia Saberes
                 </button>
 
-                <button class="btn btn-primary btnInformeArea" area="artistica" periodo="'.$_SESSION['periodo'].'" idCurso=1 tabla="primero" informe="informe-area">
+                <button class="btn btn-primary btnInformeArea" area="artistica" periodo="'.$_SESSION['periodo'].'" idCurso=13 tabla="tercero" informe="informe-area">
                   
                   Informes Curso
                 </button>
@@ -76,8 +76,8 @@
               <?php
 
                   $item = "id_curso";
-                  $valor = 1;
-                  $tabla = "primero";
+                  $valor = 13;
+                  $tabla = "tercero";
                   $periodo = $_SESSION["periodo"];
                   $verifica = true;
 
@@ -107,15 +107,13 @@
 
 
                           if ($_SESSION["perfil"] != "Preceptor") {
-                            
+
                             
                             echo'<div class="btn-group">
 
-                              <button class="btn btn-warning btnEditarInformeArtistica" tabla="primero" periodo="'.$_SESSION['periodo'].'" idAlumno="'.$value["id"].'" nombreAlumno="'.$value["nombre"].'" data-toggle="modal" data-target="#modalEditarInforme"><i class="fa fa-pencil"></i></button>
-
-  
+                              <button class="btn btn-warning btnEditarInformeArtistica" nombreAlumno="'.$value["nombre"].'" tabla="tercero" periodo="'.$_SESSION['periodo'].'" idAlumno="'.$value["id"].'" data-toggle="modal" data-target="#modalEditarInforme"><i class="fa fa-pencil"></i></button>
+                              
                             </div>';
-                           
                             
                              
                             }
@@ -123,12 +121,11 @@
 
                             echo '<div class="btn-group">
                                 
-                              <button class="btn btn-primary btnImprimirInformeIndividual" informe="informe-individual" periodo="'.$_SESSION['periodo'].'" tabla="primero" area="artistica" idAlumno="'.$value["id"].'" data-toggle="modal" data-target="#modalImprimirInformeIndividual"><i class="fa fa-print"></i></button>
+                              <button class="btn btn-primary btnImprimirInformeIndividual" informe="informe-individual" periodo="'.$_SESSION['periodo'].'" tabla="tercero" area="artistica" idAlumno="'.$value["id"].'" data-toggle="modal" data-target="#modalImprimirInformeIndividual"><i class="fa fa-print"></i></button>
                               
                             </div>
 
                           </td>
-
 
                         </tr> ';
                   }
@@ -176,7 +173,7 @@
             <button type="button" class="close" data-dismiss="modal">&times;</button>
 
            
-              <h4 class="modal-title" id="alumnoEdicion"></h4>
+            <h4 class="modal-title" id="alumnoEdicion"></h4>
 
           </div>
 
@@ -256,7 +253,6 @@
 
             <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Salir</button>
 
-
             <button type="submit" class="btn btn-primary">Guardar Cambios</button>
 
               <input type="hidden" name="idAlumno" id="idAlumno"> 
@@ -265,8 +261,8 @@
 
          <?php
 
-              $tabla = "primero";
-              $curso = "11tm-artistica";
+              $tabla = "tercero";
+              $curso = "33tm-artistica";
 
               $editarInforme = new ControladorInformes();
               $editarInforme -> ctrEditarInformeArtistica($tabla, $curso);
@@ -349,15 +345,13 @@
 
          <?php
 
-              $tabla = "primero";
-              $curso = "11tm-artistica";
-              $ncurso = 1;
+              $tabla = "tercero";
+              $curso = "33tm-artistica";
+              $ncurso = 13;
               $periodo = $_SESSION["periodo"];
-              
 
               $copiaSaberes = new ControladorInformes();
               $copiaSaberes -> ctrCopiarSaberesArtistica($tabla, $curso, $ncurso, $periodo);
-
 
           ?>
 
