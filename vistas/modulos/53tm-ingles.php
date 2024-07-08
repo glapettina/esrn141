@@ -14,12 +14,12 @@
     
     <section class="content-header">
       <h1>
-        1º Tercera TM - Area Segundas Lenguas
+        5º Tercera TM - Area Segundas Lenguas
         
       </h1>
       <ol class="breadcrumb">
         <li><a href="inicio"><i class="fa fa-dashboard"></i> Inicio</a></li>
-        <li class="active">1º Tercera TM - Area Segundas Lenguas</li>
+        <li class="active">5º Tercera TM - Area Segundas Lenguas</li>
       </ol>
     </section>
 
@@ -35,12 +35,12 @@
             
               echo '<div class="box-header with-border">
                         
-                <button type="submit" class="btn btn-danger" idCurso=4 tabla="primero" data-toggle="modal" data-target="#modalCopiaSaberes">
+                <button type="submit" class="btn btn-danger" idCurso=16 tabla="quinto" data-toggle="modal" data-target="#modalCopiaSaberes">
                   
                   Copia Saberes
                 </button>
 
-                <button class="btn btn-primary btnInformeArea" area="ingles" periodo="'.$_SESSION['periodo'].'" idCurso=4 tabla="primero" informe="informe-area">
+                <button class="btn btn-primary btnInformeArea" area="ingles" periodo="'.$_SESSION['periodo'].'" idCurso=16 tabla="quinto" informe="informe-area">
                   
                   Informes Curso
                 </button>
@@ -76,8 +76,8 @@
               <?php
 
                   $item = "id_curso";
-                  $valor = 4;
-                  $tabla = "primero";
+                  $valor = 16;
+                  $tabla = "quinto";
                   $periodo = $_SESSION["periodo"];
                   $verifica = true;
 
@@ -111,7 +111,7 @@
                             
                             echo'<div class="btn-group">
 
-                              <button class="btn btn-warning btnEditarInformeIngles" nombreAlumno="'.$value["nombre"].'" tabla="primero" periodo="'.$_SESSION['periodo'].'" idAlumno="'.$value["id"].'" data-toggle="modal" data-target="#modalEditarInforme"><i class="fa fa-pencil"></i></button>
+                              <button class="btn btn-warning btnEditarInformeIngles" nombreAlumno="'.$value["nombre"].'" periodo="'.$_SESSION['periodo'].'" tabla="quinto" idAlumno="'.$value["id"].'" data-toggle="modal" data-target="#modalEditarInforme"><i class="fa fa-pencil"></i></button>
                               
                             </div>';
                             
@@ -121,7 +121,7 @@
 
                             echo '<div class="btn-group">
                                 
-                              <button class="btn btn-primary btnImprimirInformeIndividual" informe="informe-individual" periodo="'.$_SESSION['periodo'].'" tabla="primero" area="ingles" idAlumno="'.$value["id"].'" data-toggle="modal" data-target="#modalImprimirInformeIndividual"><i class="fa fa-print"></i></button>
+                              <button class="btn btn-primary btnImprimirInformeIndividual" periodo="'.$_SESSION['periodo'].'" informe="informe-individual" tabla="quinto" area="ingles" idAlumno="'.$value["id"].'" data-toggle="modal" data-target="#modalImprimirInformeIndividual"><i class="fa fa-print"></i></button>
                               
                             </div>
 
@@ -234,7 +234,7 @@
 
               <div class="form-group">          
                   <label for="observaIngles">Observaciones</label>
-                      <textarea class="textinput" cols="80" rows="3" id="observaIngles" name="observaIngles">
+                      <textarea class="form-control" cols="80" rows="3" id="observaIngles" name="observaIngles">
                   </textarea>
               </div>
 
@@ -269,8 +269,8 @@
 
          <?php
 
-              $tabla = "primero";
-              $curso = "13tm-ingles";
+              $tabla = "quinto";
+              $curso = "53tm-ingles";
 
               $editarInforme = new ControladorInformes();
               $editarInforme -> ctrEditarInformeIngles($tabla, $curso);
@@ -353,9 +353,9 @@
 
          <?php
 
-              $tabla = "primero";
-              $curso = "13tm-ingles";
-              $ncurso = 4;
+              $tabla = "quinto";
+              $curso = "53tm-ingles";
+              $ncurso = 16;
               $periodo = $_SESSION["periodo"];
 
               $copiaSaberes = new ControladorInformes();
