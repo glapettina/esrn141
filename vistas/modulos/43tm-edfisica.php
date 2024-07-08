@@ -14,12 +14,12 @@
     
     <section class="content-header">
       <h1>
-        4º Primera TM - Area Educación Física
+        4º Tercera TM - Area Educación Física
         
       </h1>
       <ol class="breadcrumb">
         <li><a href="inicio"><i class="fa fa-dashboard"></i> Inicio</a></li>
-        <li class="active">4º Primera TM - Area Educación Física</li>
+        <li class="active">4º Tercera TM - Area Educación Física</li>
       </ol>
     </section>
 
@@ -35,12 +35,12 @@
             
               echo '<div class="box-header with-border">
                         
-                <button type="submit" class="btn btn-danger" idCurso=9 tabla="cuarto" data-toggle="modal" data-target="#modalCopiaSaberes">
+                <button type="submit" class="btn btn-danger" idCurso=14 tabla="cuarto" data-toggle="modal" data-target="#modalCopiaSaberes">
                   
                   Copia Saberes
                 </button>
 
-                <button class="btn btn-primary btnInformeArea" area="edfisica" periodo="'.$_SESSION['periodo'].'" idCurso=9 tabla="cuarto" informe="informe-area">
+                <button class="btn btn-primary btnInformeArea" area="edfisica" periodo="'.$_SESSION['periodo'].'" idCurso=14 tabla="cuarto" informe="informe-area">
                   
                   Informes Curso
                 </button>
@@ -76,7 +76,7 @@
               <?php
 
                   $item = "id_curso";
-                  $valor = 9;
+                  $valor = 14;
                   $tabla = "cuarto";
                   $periodo = $_SESSION["periodo"];
                   $verifica = true;
@@ -121,7 +121,7 @@
 
                             echo '<div class="btn-group">
                                 
-                              <button class="btn btn-primary btnImprimirInformeIndividual" informe="informe-individual" periodo="'.$_SESSION['periodo'].'" tabla="cuarto" area="edfisica" idAlumno="'.$value["id"].'" data-toggle="modal" data-target="#modalImprimirInformeIndividual"><i class="fa fa-print"></i></button>
+                              <button class="btn btn-primary btnImprimirInformeIndividual" periodo="'.$_SESSION['periodo'].'" informe="informe-individual" tabla="cuarto" area="edfisica" idAlumno="'.$value["id"].'" data-toggle="modal" data-target="#modalImprimirInformeIndividual"><i class="fa fa-print"></i></button>
                               
                             </div>
 
@@ -262,7 +262,7 @@
          <?php
 
               $tabla = "cuarto";
-              $curso = "41tm-edfisica";
+              $curso = "43tm-edfisica";
 
               $editarInforme = new ControladorInformes();
               $editarInforme -> ctrEditarInformeFisica($tabla, $curso);
@@ -346,8 +346,8 @@
          <?php
 
               $tabla = "cuarto";
-              $curso = "41tm-edfisica";
-              $ncurso = 9;
+              $curso = "43tm-edfisica";
+              $ncurso = 14;
               $periodo = $_SESSION["periodo"];
 
               $copiaSaberes = new ControladorInformes();

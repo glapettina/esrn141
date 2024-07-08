@@ -14,12 +14,12 @@
     
     <section class="content-header">
       <h1>
-        4º Primera TM - Area Educación Física
+        5º Tercera TM - Area Educación Física
         
       </h1>
       <ol class="breadcrumb">
         <li><a href="inicio"><i class="fa fa-dashboard"></i> Inicio</a></li>
-        <li class="active">4º Primera TM - Area Educación Física</li>
+        <li class="active">5º Tercera TM - Area Educación Física</li>
       </ol>
     </section>
 
@@ -35,12 +35,12 @@
             
               echo '<div class="box-header with-border">
                         
-                <button type="submit" class="btn btn-danger" idCurso=9 tabla="cuarto" data-toggle="modal" data-target="#modalCopiaSaberes">
+                <button type="submit" class="btn btn-danger" idCurso=16 tabla="quinto" data-toggle="modal" data-target="#modalCopiaSaberes">
                   
                   Copia Saberes
                 </button>
 
-                <button class="btn btn-primary btnInformeArea" area="edfisica" periodo="'.$_SESSION['periodo'].'" idCurso=9 tabla="cuarto" informe="informe-area">
+                <button class="btn btn-primary btnInformeArea" area="edfisica" periodo="'.$_SESSION['periodo'].'" idCurso=16 tabla="quinto" informe="informe-area">
                   
                   Informes Curso
                 </button>
@@ -76,8 +76,8 @@
               <?php
 
                   $item = "id_curso";
-                  $valor = 9;
-                  $tabla = "cuarto";
+                  $valor = 16;
+                  $tabla = "quinto";
                   $periodo = $_SESSION["periodo"];
                   $verifica = true;
 
@@ -111,7 +111,7 @@
                             
                             echo'<div class="btn-group">
 
-                              <button class="btn btn-warning btnEditarInformeFisica" nombreAlumno="'.$value["nombre"].'" tabla="cuarto" periodo="'.$_SESSION['periodo'].'" idAlumno="'.$value["id"].'" data-toggle="modal" data-target="#modalEditarInforme"><i class="fa fa-pencil"></i></button>
+                              <button class="btn btn-warning btnEditarInformeFisica" nombreAlumno="'.$value["nombre"].'" periodo="'.$_SESSION['periodo'].'" tabla="quinto" idAlumno="'.$value["id"].'" data-toggle="modal" data-target="#modalEditarInforme"><i class="fa fa-pencil"></i></button>
                               
                             </div>';
                             
@@ -121,7 +121,7 @@
 
                             echo '<div class="btn-group">
                                 
-                              <button class="btn btn-primary btnImprimirInformeIndividual" informe="informe-individual" periodo="'.$_SESSION['periodo'].'" tabla="cuarto" area="edfisica" idAlumno="'.$value["id"].'" data-toggle="modal" data-target="#modalImprimirInformeIndividual"><i class="fa fa-print"></i></button>
+                              <button class="btn btn-primary btnImprimirInformeIndividual" periodo="'.$_SESSION['periodo'].'" informe="informe-individual" tabla="quinto" area="edfisica" idAlumno="'.$value["id"].'" data-toggle="modal" data-target="#modalImprimirInformeIndividual"><i class="fa fa-print"></i></button>
                               
                             </div>
 
@@ -253,6 +253,14 @@
 
             <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Salir</button>
 
+           <!--  <?php
+
+              $idCurso = 1;
+
+            echo'<button type="button" curso="'.$idCurso.'" tabla="primero" class="btn btn-danger pull-center" id="btnCopia">Copiar Saberes</button>';
+
+            ?>  -->
+
             <button type="submit" class="btn btn-primary">Guardar Cambios</button>
 
               <input type="hidden" name="idAlumno" id="idAlumno"> 
@@ -261,8 +269,8 @@
 
          <?php
 
-              $tabla = "cuarto";
-              $curso = "41tm-edfisica";
+              $tabla = "quinto";
+              $curso = "53tm-edfisica";
 
               $editarInforme = new ControladorInformes();
               $editarInforme -> ctrEditarInformeFisica($tabla, $curso);
@@ -345,9 +353,9 @@
 
          <?php
 
-              $tabla = "cuarto";
-              $curso = "41tm-edfisica";
-              $ncurso = 9;
+              $tabla = "quinto";
+              $curso = "53tm-edfisica";
+              $ncurso = 16;
               $periodo = $_SESSION["periodo"];
 
               $copiaSaberes = new ControladorInformes();
